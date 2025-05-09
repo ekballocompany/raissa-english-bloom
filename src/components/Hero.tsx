@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const Hero: React.FC = () => {
-  return (
-    <section id="hero" className="min-h-screen flex items-center pt-20 pb-16 bg-gradient-to-br from-raissa-creme-claro to-white">
+  return <section id="hero" className="min-h-screen flex items-center pt-20 pb-16 bg-gradient-to-br from-raissa-creme-claro to-white">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="order-2 lg:order-1 animate-fade-in">
@@ -31,30 +28,19 @@ const Hero: React.FC = () => {
             <div className="relative">
               {/* Replace with actual image when available */}
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-raissa-pessego-claro flex items-center justify-center overflow-hidden border-8 border-white shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80" 
-                  alt="Raissa Belomi - English Teacher" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80" alt="Raissa Belomi - English Teacher" className="w-full h-full object-cover" />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-white rounded-full p-4 shadow-md">
-                <span className="text-4xl">🇬🇧</span>
-              </div>
+              
             </div>
           </div>
         </div>
         
         <div className="mt-16 flex justify-center animate-fade-in-slow">
-          <a 
-            href="#about" 
-            className="p-2 rounded-full border border-raissa-rosa-queimado text-raissa-rosa-queimado animate-bounce"
-          >
+          <a href="#about" className="p-2 rounded-full border border-raissa-rosa-queimado text-raissa-rosa-queimado animate-bounce">
             <ArrowDown size={24} />
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
