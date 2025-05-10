@@ -38,9 +38,9 @@ const Differentials: React.FC = () => {
   ];
 
   return (
-    <Section id="differentials" className="bg-gradient-to-b from-white to-raissa-creme-claro/30">
+    <Section id="differentials" className="bg-gradient-to-b from-white to-gray-100">
       <div className="text-center mb-12 animate-fade-in">
-        <h2 className="text-3xl md:text-4xl font-semibold mb-4">Diferenciais</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-raissa-azul-escuro">Diferenciais</h2>
         <p className="text-gray-700 max-w-2xl mx-auto">
           O que torna minhas aulas únicas e eficientes para o seu aprendizado.
         </p>
@@ -53,10 +53,10 @@ const Differentials: React.FC = () => {
             className="bg-white p-6 rounded-lg shadow-md border border-gray-100 transition-transform hover:-translate-y-1 animate-fade-in"
           >
             <div className="flex items-center mb-4">
-              <div className="p-3 rounded-full bg-raissa-rosa-queimado/10 mr-4">
-                <item.icon className="h-6 w-6 text-raissa-rosa-queimado" />
+              <div className="p-3 rounded-full bg-raissa-vermelho-escuro/10 mr-4">
+                <item.icon className="h-6 w-6 text-raissa-vermelho-escuro" />
               </div>
-              <h3 className="font-medium text-xl">{item.title}</h3>
+              <h3 className="font-medium text-xl text-raissa-azul-intenso">{item.title}</h3>
             </div>
             <p className="text-gray-700">{item.description}</p>
           </div>
