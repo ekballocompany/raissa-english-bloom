@@ -43,37 +43,49 @@ const ClassPackages: React.FC = () => {
         </p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {packages.map((pkg, index) => (
-          <Card key={index} className="border border-gray-100 shadow-lg transition-all duration-300 hover:shadow-xl animate-fade-in">
-            <CardHeader className="bg-gradient-to-r from-raissa-rosa-queimado/10 to-raissa-salmao-claro/10 rounded-t-lg pb-4">
-              <div className="flex justify-center mb-2">
-                <div className="bg-raissa-rosa-queimado/10 p-3 rounded-full">
-                  <pkg.icon className="h-8 w-8 text-raissa-rosa-queimado" />
+      <div className="flex flex-col lg:flex-row gap-8">
+        {/* Left Column - Image */}
+        <div className="lg:w-1/3 flex justify-center items-start animate-fade-in">
+          <img 
+            src="/4da1774f-2c00-456c-920e-5dd6e596ad1a.png" 
+            alt="Teacher Raissa - Pacotes de Aulas" 
+            className="rounded-lg shadow-md w-full h-auto object-cover"
+          />
+        </div>
+        
+        {/* Right Column - Class Packages */}
+        <div className="lg:w-2/3 flex flex-col gap-8">
+          {packages.map((pkg, index) => (
+            <Card key={index} className="border border-gray-100 shadow-lg transition-all duration-300 hover:shadow-xl animate-fade-in">
+              <CardHeader className="bg-gradient-to-r from-raissa-rosa-queimado/10 to-raissa-salmao-claro/10 rounded-t-lg pb-4">
+                <div className="flex justify-center mb-2">
+                  <div className="bg-raissa-rosa-queimado/10 p-3 rounded-full">
+                    <pkg.icon className="h-8 w-8 text-raissa-rosa-queimado" />
+                  </div>
                 </div>
-              </div>
-              <CardTitle className="text-xl text-center">{pkg.title}</CardTitle>
-              <CardDescription className="text-center">{pkg.description}</CardDescription>
-            </CardHeader>
-            <CardContent className="pt-6">
-              <div className="text-center mb-6">
-                <span className="text-3xl font-semibold text-gray-900">{pkg.value}</span>
-              </div>
-              
-              <ul className="space-y-3">
-                {pkg.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-raissa-rosa-queimado mr-2" />
-                    <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-            <CardFooter>
-              <Button className="w-full btn-primary">{pkg.action}</Button>
-            </CardFooter>
-          </Card>
-        ))}
+                <CardTitle className="text-xl text-center">{pkg.title}</CardTitle>
+                <CardDescription className="text-center">{pkg.description}</CardDescription>
+              </CardHeader>
+              <CardContent className="pt-6">
+                <div className="text-center mb-6">
+                  <span className="text-3xl font-semibold text-gray-900">{pkg.value}</span>
+                </div>
+                
+                <ul className="space-y-3">
+                  {pkg.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center">
+                      <CheckCircle className="h-4 w-4 text-raissa-rosa-queimado mr-2" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full btn-primary">{pkg.action}</Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
       </div>
     </Section>
   );
