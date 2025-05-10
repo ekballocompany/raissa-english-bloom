@@ -70,6 +70,9 @@ export default {
 					'azul-intenso': '#033b6b',
 					'azul-escuro': '#08284e',
 					'azul-preto': '#091836',
+					'rosa-queimado': '#cb0102', // Updated to vermelho-escuro for backward compatibility
+					'pessego-claro': '#f9dacb', // Kept this from original palette for compatibility
+					'creme-claro': '#fff4e5', // Kept this from original palette for compatibility
 				}
 			},
 			fontFamily: {
@@ -109,4 +112,3 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-
