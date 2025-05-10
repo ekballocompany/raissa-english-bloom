@@ -35,7 +35,7 @@ const ClassPackages: React.FC = () => {
 
   return (
     <Section id="classes" className="bg-raissa-pessego-claro/20">
-      <div className="text-center mb-16 animate-fade-in">
+      <div className="text-center mb-8 animate-fade-in">
         <h2 className="text-3xl md:text-4xl font-semibold mb-4">Pacotes de Aulas</h2>
         <p className="text-gray-700 max-w-2xl mx-auto">
           Escolha a modalidade que melhor se adapta ao seu estilo de aprendizado e objetivos.
@@ -43,45 +43,45 @@ const ClassPackages: React.FC = () => {
         </p>
       </div>
       
-      <div className="flex flex-col lg:flex-row gap-8">
+      <div className="flex flex-col lg:flex-row gap-6">
         {/* Left Column - Image */}
-        <div className="lg:w-1/3 flex justify-center items-start animate-fade-in">
+        <div className="lg:w-5/12 flex justify-center items-start animate-fade-in">
           <img 
-            src="/4da1774f-2c00-456c-920e-5dd6e596ad1a.png" 
+            src="https://images.pexels.com/photos/3184644/pexels-photo-3184644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
             alt="Teacher Raissa - Pacotes de Aulas" 
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />
         </div>
         
         {/* Right Column - Class Packages */}
-        <div className="lg:w-2/3 flex flex-col gap-8">
+        <div className="lg:w-7/12 flex flex-col gap-4">
           {packages.map((pkg, index) => (
-            <Card key={index} className="border border-gray-100 shadow-lg transition-all duration-300 hover:shadow-xl animate-fade-in">
-              <CardHeader className="bg-gradient-to-r from-raissa-rosa-queimado/10 to-raissa-salmao-claro/10 rounded-t-lg pb-4">
-                <div className="flex justify-center mb-2">
-                  <div className="bg-raissa-rosa-queimado/10 p-3 rounded-full">
-                    <pkg.icon className="h-8 w-8 text-raissa-rosa-queimado" />
+            <Card key={index} className="border border-gray-100 shadow-md transition-all duration-300 hover:shadow-lg animate-fade-in max-h-[280px]">
+              <CardHeader className="bg-gradient-to-r from-raissa-rosa-queimado/10 to-raissa-salmao-claro/10 rounded-t-lg py-2">
+                <div className="flex justify-center mb-1">
+                  <div className="bg-raissa-rosa-queimado/10 p-2 rounded-full">
+                    <pkg.icon className="h-6 w-6 text-raissa-rosa-queimado" />
                   </div>
                 </div>
-                <CardTitle className="text-xl text-center">{pkg.title}</CardTitle>
-                <CardDescription className="text-center">{pkg.description}</CardDescription>
+                <CardTitle className="text-lg text-center">{pkg.title}</CardTitle>
+                <CardDescription className="text-center text-sm">{pkg.description}</CardDescription>
               </CardHeader>
-              <CardContent className="pt-6">
-                <div className="text-center mb-6">
-                  <span className="text-3xl font-semibold text-gray-900">{pkg.value}</span>
+              <CardContent className="py-2">
+                <div className="text-center mb-2">
+                  <span className="text-2xl font-semibold text-gray-900">{pkg.value}</span>
                 </div>
                 
-                <ul className="space-y-3">
+                <ul className="space-y-1 text-sm">
                   {pkg.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-raissa-rosa-queimado mr-2" />
+                      <CheckCircle className="h-3 w-3 text-raissa-rosa-queimado mr-2" />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
-              <CardFooter>
-                <Button className="w-full btn-primary">{pkg.action}</Button>
+              <CardFooter className="pt-0 pb-3">
+                <Button className="w-full btn-primary text-sm py-1">{pkg.action}</Button>
               </CardFooter>
             </Card>
           ))}
