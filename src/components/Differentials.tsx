@@ -29,6 +29,11 @@ const Differentials: React.FC = () => {
       icon: Calendar,
       title: 'Acompanhamento contínuo',
       description: 'Avaliação constante do progresso e ajustes no plano de estudos.'
+    },
+    {
+      icon: Calendar,
+      title: 'Abordagem empática e inclusiva',
+      description: 'Ofereço um aprendizado acolhedor, que respeite as individualidades e desenvolva a confiança no uso do idioma.'
     }
   ];
 
@@ -40,11 +45,11 @@ const Differentials: React.FC = () => {
           O que torna minhas aulas únicas e eficientes para o seu aprendizado.
         </p>
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {differentials.map((item, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className="bg-white p-6 rounded-lg shadow-md border border-gray-100 transition-transform hover:-translate-y-1 animate-fade-in"
           >
             <div className="flex items-center mb-4">

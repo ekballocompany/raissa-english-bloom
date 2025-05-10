@@ -24,7 +24,7 @@ const ClassPackages: React.FC = () => {
       action: 'Quero agendar'
     },
     {
-      title: 'Grupo de 3 Alunos',
+      title: 'Grupo de Alunos',
       description: 'Aprenda com interação, sem perder a atenção personalizada e com condições especiais.',
       icon: Users,
       features: ['Ambiente colaborativo', 'Simulações reais', 'Maior economia', 'Networking'],
