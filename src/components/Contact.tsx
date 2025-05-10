@@ -14,10 +14,10 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <Section id="contact" className="bg-white">
+    <Section id="contact" className="bg-raissa-azul-escuro text-white">
       <div className="text-center mb-12 animate-fade-in">
         <h2 className="text-3xl md:text-4xl font-semibold mb-4">Contato</h2>
-        <p className="text-gray-700 max-w-2xl mx-auto">
+        <p className="text-gray-100 max-w-2xl mx-auto">
           Vamos conversar? Agende uma aula experimental ou tire suas dúvidas.
         </p>
       </div>
@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
               href="https://wa.me/5511999999999" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center p-5 bg-green-50 rounded-lg transition-all hover:bg-green-100"
+              className="flex items-center p-5 bg-green-50 rounded-lg transition-all hover:bg-green-100 text-gray-700"
             >
               <div className="p-3 bg-green-100 rounded-full mr-4">
                 <Phone className="h-6 w-6 text-green-600" />
@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
             {/* Email */}
             <a 
               href="mailto:raissa@belomi.com" 
-              className="flex items-center p-5 bg-blue-50 rounded-lg transition-all hover:bg-blue-100"
+              className="flex items-center p-5 bg-blue-50 rounded-lg transition-all hover:bg-blue-100 text-gray-700"
             >
               <div className="p-3 bg-blue-100 rounded-full mr-4">
                 <Mail className="h-6 w-6 text-blue-600" />
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
             {/* Calendly */}
             <a 
               href="#" 
-              className="flex items-center p-5 bg-raissa-pessego-claro/30 rounded-lg transition-all hover:bg-raissa-pessego-claro/50"
+              className="flex items-center p-5 bg-raissa-pessego-claro/30 rounded-lg transition-all hover:bg-raissa-pessego-claro/50 text-gray-700"
             >
               <div className="p-3 bg-raissa-rosa-queimado/20 rounded-full mr-4">
                 <Calendar className="h-6 w-6 text-raissa-rosa-queimado" />
@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
         </div>
         
         {/* Contact Form */}
-        <div className="bg-raissa-creme-claro/20 p-8 rounded-lg animate-fade-in">
+        <div className="bg-white p-8 rounded-lg animate-fade-in text-gray-700">
           <h3 className="text-2xl font-medium mb-6">Envie uma mensagem</h3>
           
           <form onSubmit={handleSubmit} className="space-y-6">
