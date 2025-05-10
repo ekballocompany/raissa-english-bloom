@@ -63,13 +63,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors based on design requirements
+				// Updated color palette with new colors
 				raissa: {
-					'rosa-queimado': '#e98a7d',
-					'salmao-claro': '#eea597',
-					'rose-suave': '#f4bfb1',
-					'pessego-claro': '#f9dacb',
-					'creme-claro': '#fff4e5',
+					'vermelho-escuro': '#cb0102',
+					'vermelho-profundo': '#ac0103',
+					'azul-intenso': '#033b6b',
+					'azul-escuro': '#08284e',
+					'azul-preto': '#091836',
 				}
 			},
 			fontFamily: {
@@ -109,3 +109,4 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
