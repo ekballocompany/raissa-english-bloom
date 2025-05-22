@@ -1,12 +1,12 @@
 
 import React from 'react';
 import Section from './Section';
-import { Calendar, Users, Clock, FileText, MessageSquare } from 'lucide-react';
+import { Calendar, Users, Clock, FileText, MessageSquare, UserPen, RefreshCcw, UserCheck } from 'lucide-react';
 
 const Differentials: React.FC = () => {
   const differentials = [
     {
-      icon: Users,
+      icon: UserPen,
       title: 'Aulas personalizadas',
       description: 'Cada aula é adaptada às suas necessidades e objetivos específicos.'
     },
@@ -26,12 +26,12 @@ const Differentials: React.FC = () => {
       description: 'Materiais didáticos desenvolvidos especialmente para cada aluno.'
     },
     {
-      icon: Calendar,
+      icon: RefreshCcw,
       title: 'Acompanhamento contínuo',
       description: 'Avaliação constante do progresso e ajustes no plano de estudos.'
     },
     {
-      icon: Calendar,
+      icon: UserCheck,
       title: 'Abordagem empática e inclusiva',
       description: 'Ofereço um aprendizado acolhedor, que respeite as individualidades e desenvolva a confiança no uso do idioma.'
     }

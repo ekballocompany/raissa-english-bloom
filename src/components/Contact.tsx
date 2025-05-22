@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
             </a>
             
             {/* Calendly */}
-            <a 
+            {/* <a 
               href="#" 
               className="flex items-center p-5 bg-raissa-pessego-claro/30 rounded-lg transition-all hover:bg-raissa-pessego-claro/50 text-gray-700"
             >
@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
                 <h4 className="font-medium">Calendly</h4>
                 <p className="text-gray-600">Agende diretamente na minha agenda</p>
               </div>
-            </a>
+            </a> */}
           </div>
         </div>
         

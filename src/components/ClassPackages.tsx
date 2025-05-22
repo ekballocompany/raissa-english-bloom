@@ -12,8 +12,11 @@ const ClassPackages: React.FC = () => {
       description: 'Foco total no aluno. Aulas personalizadas de acordo com suas necessidades específicas.',
       icon: User,
       features: ['Material personalizado', 'Flexibilidade de horários', 'Ritmo adaptado', 'Atenção exclusiva'],
-      value: 'R$120 / aula',
-      action: 'Tenho interesse'
+      // value: 'R$120 / aula',
+      action: 'Tenho interesse',
+      package1: '1 aula/semana: R$320,00 (R$80,00/aula)',
+      package2: '2 aula/semana: R$560,00 (R$70,00/aula)',
+      package3: '3 aula/semana: R$720,00 (R$60,00/aula)'
     },
     {
       title: 'Aula em Dupla',
@@ -21,7 +24,10 @@ const ClassPackages: React.FC = () => {
       icon: Users,
       features: ['Interação em grupo', 'Prática de conversação', 'Economia compartilhada', 'Dinâmicas exclusivas'],
       value: 'R$80 / aula por pessoa',
-      action: 'Quero agendar'
+      action: 'Quero agendar',
+      package1: '1 aula/semana: R$260,00 (R$65,00/aula)',
+      package2: '2 aula/semana: R$480,00 (R$60,00/aula)',
+      package3: '3 aula/semana: R$600,00 (R$50,00/aula)'
     },
     {
       title: 'Grupo de Alunos',
@@ -29,7 +35,10 @@ const ClassPackages: React.FC = () => {
       icon: Users,
       features: ['Ambiente colaborativo', 'Simulações reais', 'Maior economia', 'Networking'],
       value: 'R$60 / aula por pessoa',
-      action: 'Saiba mais'
+      action: 'Saiba mais',
+      package1: '1 aula/semana: R$200,00 (R$50,00/aula)',
+      package2: '2 aula/semana: R$360,00 (R$45,00/aula)',
+      package3: '3 aula/semana: R$480,00 (R$40,00/aula)'
     }
   ];
 
@@ -42,52 +51,71 @@ const ClassPackages: React.FC = () => {
           Todas as aulas incluem material didático e acompanhamento personalizado.
         </p>
       </div>
-      
+
       <div className="flex flex-col lg:flex-row gap-6">
         {/* Left Column - Image */}
         <div className="lg:w-5/12 flex justify-center items-start animate-fade-in">
-          <img 
-            src="https://images.pexels.com/photos/3184644/pexels-photo-3184644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-            alt="Teacher Raissa - Pacotes de Aulas" 
+          <img
+            src="img_card.jpeg"
+            alt="Teacher Raissa - Pacotes de Aulas"
             className="rounded-lg shadow-md w-full h-auto object-cover"
           />
         </div>
-        
+
         {/* Right Column - Class Packages */}
         <div className="lg:w-7/12 flex flex-col gap-4">
           {packages.map((pkg, index) => (
-            <Card key={index} className="border border-gray-100 shadow-md transition-all duration-300 hover:shadow-lg animate-fade-in max-h-[280px]">
-              <CardHeader className="bg-gradient-to-r from-raissa-rosa-queimado/10 to-raissa-salmao-claro/10 rounded-t-lg py-2">
+            <Card
+              key={index}
+              className="border border-gray-100 shadow-md transition-all duration-300 hover:shadow-lg animate-fade-in w-full max-w-lg mx-auto"
+            >
+              <CardHeader className="bg-gradient-to-r from-raissa-rosa-queimado/10 to-raissa-salmao-claro/10 rounded-t-lg py-2 px-3">
                 <div className="flex justify-center mb-1">
                   <div className="bg-raissa-rosa-queimado/10 p-2 rounded-full">
-                    <pkg.icon className="h-6 w-6 text-raissa-rosa-queimado" />
+                    <pkg.icon className="h-5 w-5 text-raissa-rosa-queimado" />
                   </div>
                 </div>
-                <CardTitle className="text-lg text-center">{pkg.title}</CardTitle>
-                <CardDescription className="text-center text-sm">{pkg.description}</CardDescription>
+                <CardTitle className="text-base text-center">{pkg.title}</CardTitle>
+                <CardDescription className="text-center text-xs">{pkg.description}</CardDescription>
               </CardHeader>
-              <CardContent className="py-2">
+              <CardContent className="py-2 px-3">
                 <div className="text-center mb-2">
-                  <span className="text-2xl font-semibold text-gray-900">{pkg.value}</span>
+                  <span className="text-xl font-semibold text-gray-900">{pkg.value}</span>
                 </div>
-                
-                <ul className="space-y-1 text-sm">
-                  {pkg.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center">
-                      <CheckCircle className="h-3 w-3 text-raissa-rosa-queimado mr-2" />
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+
+                <div className="flex flex-col md:flex-row gap-4 items-center md:items-start text-center md:text-left">
+                  {/* Coluna da esquerda */}
+                  <div className="w-full md:w-1/2">
+                    <p className="text-sm text-gray-700"><small>{pkg.package1}</small></p>
+                    <p className="text-sm text-gray-700"><small>{pkg.package2}</small></p>
+                    <p className="text-sm text-gray-700"><small>{pkg.package3}</small></p>
+                  </div>
+
+                  {/* Coluna da direita */}
+                  <div className="w-full md:w-1/2">
+                    <ul className="space-y-1 text-sm max-h-[130px] overflow-y-auto">
+                      {pkg.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start justify-start">
+                          <CheckCircle className="h-3 w-3 text-raissa-rosa-queimado mt-1 mr-2" />
+                          <span className="text-gray-700 text-xs">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </CardContent>
-              <CardFooter className="pt-0 pb-3">
-                <Button className="w-full btn-primary text-sm py-1">{pkg.action}</Button>
+
+
+
+              <CardFooter className="pt-2 pb-3 px-3">
+                <Button className="w-full btn-primary text-xs py-1.5">{pkg.action}</Button>
               </CardFooter>
             </Card>
           ))}
         </div>
+
       </div>
-    </Section>
+    </Section >
   );
 };
 

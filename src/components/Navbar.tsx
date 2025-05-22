@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -13,6 +12,11 @@ const Navbar: React.FC = () => {
     { name: 'Depoimentos', href: '#testimonials' },
     { name: 'Contato', href: '#contact' }
   ];
+
+  const agendamentoUrl = 'https://google.com.br';
+  const handleAgendarClick = () => {
+    window.open(agendamentoUrl, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <header className="fixed w-full z-50 bg-white shadow-sm py-3">
@@ -32,7 +36,7 @@ const Navbar: React.FC = () => {
               {link.name}
             </a>
           ))}
-          <Button className="btn-primary ml-2">Agende uma Aula</Button>
+          <Button onClick={handleAgendarClick} className="btn-primary ml-2">Agende uma Aula</Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -58,7 +62,9 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="btn-primary w-full mt-2">Agende uma Aula</Button>
+            <Button onClick={handleAgendarClick} className="btn-primary w-full mt-2">
+              Agende uma Aula
+            </Button>
           </div>
         </div>
       )}
