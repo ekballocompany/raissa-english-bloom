@@ -41,7 +41,7 @@ const About: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-gray-900">Certificação TEFL</h4>
-                  <p className="text-gray-700">University of Cambridge</p>
+                  {/* <p className="text-gray-700">University of Cambridge</p> */}
                 </div>
               </div>
 
@@ -52,7 +52,7 @@ const About: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-gray-900">Certificação ESL</h4>
-                  <p className="text-gray-700">University of Cambridge</p>
+                  {/* <p className="text-gray-700">University of Cambridge</p> */}
                 </div>
               </div>
 
@@ -63,7 +63,7 @@ const About: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-gray-900">Graduada em Letras Inglês/Português</h4>
-                  <p className="text-gray-700">University of Cambridge</p>
+                  {/* <p className="text-gray-700">University of Cambridge</p> */}
                 </div>
               </div>
 
