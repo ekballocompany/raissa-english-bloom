@@ -8,20 +8,34 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Home', href: '#hero' },
     { name: 'Sobre', href: '#about' },
-    { name: 'Aulas', href: '#classes' },
+    { name: 'Aulas', href: '#class-packages' }, // corrigido para id correto
     { name: 'Depoimentos', href: '#testimonials' },
     { name: 'Contato', href: '#contact' }
   ];
 
-  const agendamentoUrl = 'https://google.com.br';
+  const agendamentoUrl = 'https://wa.me/5516991022356?text=Hi%2C%20Teacher!%20Gostaria%20de%20saber%20mais%20sobre%20as%20aulas%20de%20ingl%C3%AAs%20%F0%9F%98%8A';
   const handleAgendarClick = () => {
     window.open(agendamentoUrl, '_blank', 'noopener,noreferrer');
+  };
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const id = href.replace('#', '');
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false); // fecha menu mobile após clicar
   };
 
   return (
     <header className="fixed w-full z-50 bg-white shadow-sm py-3">
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="text-xl md:text-2xl font-poppins font-semibold">
+        <a
+          href="#hero"
+          className="text-xl md:text-2xl font-poppins font-semibold"
+          onClick={e => handleScroll(e, '#hero')}
+        >
           <span className="text-raissa-rosa-queimado">Teacher </span>Raissa
         </a>
 
@@ -32,6 +46,7 @@ const Navbar: React.FC = () => {
               key={link.name}
               href={link.href}
               className="text-gray-700 hover:text-raissa-rosa-queimado transition-colors duration-200"
+              onClick={e => handleScroll(e, link.href)}
             >
               {link.name}
             </a>
@@ -43,6 +58,7 @@ const Navbar: React.FC = () => {
         <button
           className="md:hidden text-gray-700"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -57,7 +73,7 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 href={link.href}
                 className="text-gray-700 py-2 hover:text-raissa-rosa-queimado transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={e => handleScroll(e, link.href)}
               >
                 {link.name}
               </a>

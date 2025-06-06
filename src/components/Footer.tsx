@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
           {/* Social Media Links */}
           <div className="flex space-x-4">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/raibelomi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white rounded-full text-raissa-azul-preto hover:bg-raissa-vermelho-escuro hover:text-white transition-colors shadow-sm"

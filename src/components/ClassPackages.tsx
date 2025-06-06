@@ -6,6 +6,10 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 
 const ClassPackages: React.FC = () => {
+  const agendamentoUrl = 'https://wa.me/5516991022356?text=Hi%2C%20Teacher!%20Gostaria%20de%20saber%20mais%20sobre%20as%20aulas%20de%20ingl%C3%AAs%20%F0%9F%98%8A';
+  const handleAgendarClick = () => {
+    window.open(agendamentoUrl, '_blank', 'noopener,noreferrer');
+  };
   const packages = [
     {
       title: 'Aula Individual',
@@ -23,7 +27,7 @@ const ClassPackages: React.FC = () => {
       description: 'Ideal para quem quer aprender junto com um amigo ou parceiro, estimulando conversação.',
       icon: Users,
       features: ['Interação em grupo', 'Prática de conversação', 'Economia compartilhada', 'Dinâmicas exclusivas'],
-      value: 'R$80 / aula por pessoa',
+      // value: 'R$80 / aula por pessoa',
       action: 'Quero agendar',
       package1: '1 aula/semana: R$260,00 (R$65,00/aula)',
       package2: '2 aula/semana: R$480,00 (R$60,00/aula)',
@@ -34,7 +38,7 @@ const ClassPackages: React.FC = () => {
       description: 'Aprenda com interação, sem perder a atenção personalizada e com condições especiais.',
       icon: Users,
       features: ['Ambiente colaborativo', 'Simulações reais', 'Maior economia', 'Networking'],
-      value: 'R$60 / aula por pessoa',
+      // value: 'R$60 / aula por pessoa',
       action: 'Saiba mais',
       package1: '1 aula/semana: R$200,00 (R$50,00/aula)',
       package2: '2 aula/semana: R$360,00 (R$45,00/aula)',
@@ -80,7 +84,7 @@ const ClassPackages: React.FC = () => {
               </CardHeader>
               <CardContent className="py-2 px-3">
                 <div className="text-center mb-2">
-                  <span className="text-xl font-semibold text-gray-900">{pkg.value}</span>
+                  {/* <span className="text-xl font-semibold text-gray-900">{pkg?.value}</span> */}
                 </div>
 
                 <div className="flex flex-col md:flex-row gap-4 items-center md:items-start text-center md:text-left">
@@ -108,7 +112,7 @@ const ClassPackages: React.FC = () => {
 
 
               <CardFooter className="pt-2 pb-3 px-3">
-                <Button className="w-full btn-primary text-xs py-1.5">{pkg.action}</Button>
+                <Button onClick={handleAgendarClick}  className="w-full btn-primary text-xs py-1.5">{pkg.action}</Button>
               </CardFooter>
             </Card>
           ))}

@@ -21,17 +21,17 @@ const Contact: React.FC = () => {
           Vamos conversar? Agende uma aula experimental ou tire suas dúvidas.
         </p>
       </div>
-      
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         {/* Contact Options */}
         <div className="space-y-8 animate-fade-in">
           <h3 className="text-2xl font-medium">Fale comigo</h3>
-          
+
           <div className="space-y-6">
             {/* WhatsApp */}
-            <a 
-              href="https://wa.me/5511999999999" 
-              target="_blank" 
+            <a
+              href="https://wa.me/5516991022356?text=Hi%2C%20Teacher!%20Gostaria%20de%20saber%20mais%20sobre%20as%20aulas%20de%20ingl%C3%AAs%20%F0%9F%98%8A"
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center p-5 bg-green-50 rounded-lg transition-all hover:bg-green-100 text-gray-700"
             >
@@ -43,10 +43,10 @@ const Contact: React.FC = () => {
                 <p className="text-gray-600">Converse diretamente comigo</p>
               </div>
             </a>
-            
+
             {/* Email */}
-            <a 
-              href="mailto:raissa@belomi.com" 
+            <a
+              href="mailto:raissapb2008@hotmail.com"
               className="flex items-center p-5 bg-blue-50 rounded-lg transition-all hover:bg-blue-100 text-gray-700"
             >
               <div className="p-3 bg-blue-100 rounded-full mr-4">
@@ -54,10 +54,10 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-medium">E-mail</h4>
-                <p className="text-gray-600">raissa@belomi.com</p>
+                <p className="text-gray-600">raissapb2008@hotmail.com</p>
               </div>
             </a>
-            
+
             {/* Calendly */}
             {/* <a 
               href="#" 
@@ -73,60 +73,60 @@ const Contact: React.FC = () => {
             </a> */}
           </div>
         </div>
-        
+
         {/* Contact Form */}
         <div className="bg-white p-8 rounded-lg animate-fade-in text-gray-700">
           <h3 className="text-2xl font-medium mb-6">Envie uma mensagem</h3>
-          
+
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block mb-2 text-gray-700">
                 Nome
               </label>
-              <Input 
-                id="name" 
+              <Input
+                id="name"
                 placeholder="Seu nome completo"
                 className="w-full"
                 required
               />
             </div>
-            
+
             <div>
               <label htmlFor="email" className="block mb-2 text-gray-700">
                 E-mail
               </label>
-              <Input 
-                id="email" 
+              <Input
+                id="email"
                 type="email"
                 placeholder="seu.email@exemplo.com"
                 className="w-full"
                 required
               />
             </div>
-            
+
             <div>
               <label htmlFor="goal" className="block mb-2 text-gray-700">
                 Objetivo com o inglês
               </label>
-              <Input 
-                id="goal" 
+              <Input
+                id="goal"
                 placeholder="Ex: Viagem, trabalho, estudos..."
                 className="w-full"
               />
             </div>
-            
+
             <div>
               <label htmlFor="message" className="block mb-2 text-gray-700">
                 Mensagem
               </label>
-              <Textarea 
-                id="message" 
+              <Textarea
+                id="message"
                 placeholder="Escreva sua mensagem aqui..."
                 className="w-full min-h-[120px]"
                 required
               />
             </div>
-            
+
             <Button type="submit" className="w-full">
               <Send className="h-4 w-4 mr-2" /> Enviar mensagem
             </Button>
